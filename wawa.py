@@ -1,7 +1,5 @@
 import requests
-import getpass
 import re
-import urllib3
 
 
 
@@ -69,3 +67,10 @@ def getURLList(listname, key):
     print(response)
 
 
+def commit(key):
+
+    apirequest = 'https://192.168.169.101/api/?key=' + key + '&type=commit&action=partial&cmd=<commit><partial><device-and-network>excluded</device-and-network><shared-object>excluded</shared-object></partial></commit>'
+    response = requests.get(apirequest, verify=False)
+    response = response.content.decode('UTF-8')
+
+    print(response)

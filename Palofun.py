@@ -18,3 +18,4 @@ if __name__ == '__main__':
     #wawa.clearDHCPLeases(interface, key)
     FQDNList = 'craigslist.com', 'Apple.com', 'Google.com'
     wawa.writeURLList(listname, FQDNList, key)
+    wawa.commit(key)
